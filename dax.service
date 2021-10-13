@@ -5,7 +5,7 @@ Wants=network-online.target
 [Service]
 WorkingDirectory=/root
 User=root
-ExecStart=/usr/bin/geth --gcmode archive --syncmode full --networkid 24 --rpc --rpcport 8545 --rpcapi "db,eth,net,web3,personal,debug" --rpccorsdomain "*" --rpcvhosts "*"
+ExecStart=/usr/bin/geth --gcmode archive --syncmode full --networkid 24 --http --http.port 8545 --http.api "db,eth,net,web3,personal,debug" --rpccorsdomain "*" --rpcvhosts "*"
 Restart=always
 RestartSec=5s
 [Install]
